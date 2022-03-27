@@ -1,51 +1,219 @@
 @media screen and (max-width:776px){
 
-  #bar{
-    padding-top: 3px;
-    padding-bottom: 3px;
-  }
+/* バックグラウンド */
+.second-page{
+  background-size: 100vw;
+}
+/* バー */
 
-  #bar img{
-    width: 125px;
-  }
+body{
+  width: 97vw;
+  background-image: url(../image/background_image.png);
+  background-size: 250px;
+  background-repeat: no-repeat;
+  background-position: center 0px;
+}
 
-  main{
-    width: 95vw;
-    text-align: center;
-  }
+#bar{
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
 
-  #container-intro{
-    flex-direction: column;
-  }
-  
-  #introduce-left img{
-    width: 50vw;
-    margin-top: 0px;
-  }
+#bar img{
+  width: 125px;
+}
 
-  #introduce-left p{
-    margin-top: 0px;
-  }
+/* グローバルナビゲーション */
+.openbtn{
+  top: -10px;
+	right: 2px;
+}
 
-  #introduce-left{
-      height: 600px;
-  }
+/* メイン */
+main{
+  width: 95vw;
+  text-align: center;
+}
 
-  #introduce-left p{
-    font-size: 1rem;
-    width: 95vw;
-  }
+/* イントロダクション */
+#container-intro{
+  flex-direction: column;
+}
 
-  #introduce-right{
-    flex-direction: row;
-    margin-left: auto;
-    margin-left: 0px;
-  }
+#container-intro{
+  height: 650px;
+}
 
-  iframe{
-    margin: auto;
-    width: 45vw;
-    height: 30vw;
-  }
+#introduce-left img{
+  width: 230px;
+  margin-top: 20px;
+}
+
+#introduce-left p{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  top: 100px;
+}
+
+#introduce-left{
+    height: 600px;
+}
+
+#introduce-left p{
+  font-size: 1rem;
+  width: 95vw;
+}
+
+#introduce-right{
+  flex-direction: row;
+  margin-left: auto;
+  margin-left: 0px;
+}
+
+iframe{
+  margin: auto;
+  width: 45vw;
+  height: 30vw;
+}
+
+#introduce{
+  margin-bottom: 30px;
+}
+
+/* ディスコグラフィ */
+.container-disco{
+  flex-direction: column;
+}
+
+.container-disco img{
+  margin: auto;
+}
+
+.flex-item-text{
+  width: 90vw;
+  margin-top: auto;
+}
+
+.flex-item-text-title{
+  display: block;
+}
+
+.flex-item-text-title time{
+  font-size: 0.8rem;
+}
+
+.flex-item-text p{
+  text-align: justify;
+}
+
+h3{
+  margin: 10px 0px 6px 0px;
+  font-size: 1.4rem;
+}
+
+/* LIVE */
+
+#live-main{
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* NEWS */
+
+#news-main{
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* TV */
+
+#tv-main{
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* CONTACT */
+#contact-main{
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* フッター */
+#footer-sns-logo img{
+  width: 25px;
+}
+
+#footer-sns-logo{
+  width: 110px;
+}
+
+#footer-vaundy-img{
+  width: 15px;
+  height: 33px;
+  margin-top: 4px;
+}
+
+
+/*アコーディオンのcss*/
+/*アコーディオン全体*/
+.accordion-area{
+  list-style: none;
+  width: 80vw;
+  max-width: 900px;
+  margin: 0 0 40px;
+}
+
+.title{
+  font-size: 0.8rem;
+}
+
+.title time{
+  display: none;
+}
+
+.box img{
+  float: none;
+  width: 300px;
+  margin: 10px;
+}
+
+.box p{
+ font-size: 0.7rem;
+}
+
+/* コンタクトフォーム */
+
+form{
+  width: 300px;
+  margin: 0 auto 60px;
+}
+
+form input{
+  width: 300px;
+  height: 30px;
+  font-size: 0.8rem;
+}
+
+form textarea{
+  width: 300px;
+  height: 200px;
+  font-size: 0.8rem;
+}
+
+form p{
+  font-size: 0.8rem;
+}
+
+
+#post{
+  width: 80px;
+  height: 40px;
+  font-size: 0.7rem;
+  padding: 5px;
+}
+
+#post-button{
+  margin: 20 0 0 110;
+}
 
 }

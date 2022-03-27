@@ -2,13 +2,29 @@ html{
     font-size: 20px;
 }
 
-h1{
-    display: none;    
+.second-page{
+    background: linear-gradient(150deg, #f65a5a, white);
+    background-size: 1900px;
+    background-repeat: no-repeat;
 }
 
-main{
-    width: 1200px;
+
+body{
+    background-image: url(../image/background_image.png);
+    background-size: 500px;
+    background-repeat: no-repeat;
+    background-position: 700px 0px;
     margin: auto;
+    width: 1900px;
+}
+
+
+
+/* TOPページ */
+
+/* ヘッダー */
+h1{
+    display: none;    
 }
 
 #bar{
@@ -20,22 +36,21 @@ main{
     position: fixed;
     top: 0px;
     left: 0px;
-    z-index: 2;
+    z-index: 999;
 }
 
 #header-image{
     background-color: red;
-    width: 100vw;
+    width: 100%;
     position: relative;
-    text-align: center;
     top: -7px;
 }   
 
 #header-image div{
     position: absolute;
-    top: 28%;
-    left: 24%;
-    font-size: 15vw;
+    top: 22%;
+    left: 23vw;
+    font-size: 17vw;
     color: white;
     text-shadow: 25px 25px 10px #7a2b2b;
     z-index: 0;
@@ -43,16 +58,174 @@ main{
 }
 
 #header-vaundy{
-    width: 35vw;
-    /* z-index: 2; */
+    position: relative;
+    width: 30vw;
+    z-index: 1;
+    left: 35vw;
 }
 
-#header-image div{
-    /* z-index: 1; */
+/* グローバルナビゲーション */
+/*========= ナビゲーションのためのCSS ===============*/
+
+/*アクティブになったエリア*/
+#g-nav.panelactive{
+    /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+    position:fixed;
+    z-index: 999;
+	top: 0;
+	width:100%;
+    height: 100vh;
 }
 
+/*丸の拡大*/
+.circle-bg{
+    position: fixed;
+	z-index:3;
+    /*丸の形*/
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #999;
+    /*丸のスタート位置と形状*/
+	transform: scale(0);/*scaleをはじめは0に*/
+	right:-50px;
+    top:-50px;
+    transition: all .6s;/*0.6秒かけてアニメーション*/
+}
+
+.circle-bg.circleactive{
+	transform: scale(50);/*クラスが付与されたらscaleを拡大*/
+}
+
+/*ナビゲーションの縦スクロール*/
+#g-nav-list{
+    display: none;/*はじめは表示なし*/
+    /*ナビの数が増えた場合縦スクロール*/
+    position: fixed;
+    z-index: 999; 
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+#g-nav.panelactive #g-nav-list{
+     display: block; /*クラスが付与されたら出現*/
+}
+
+/*ナビゲーション*/
+#g-nav ul {
+	opacity: 0;/*はじめは透過0*/
+    /*ナビゲーション天地中央揃え※レイアウトによって調整してください。不必要なら削除*/
+    position: absolute;
+    z-index: 999;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+/*背景が出現後にナビゲーションを表示*/
+#g-nav.panelactive ul {
+    opacity:1;
+}
+
+/* 背景が出現後にナビゲーション li を表示※レイアウトによって調整してください。不必要なら削除*/
+#g-nav.panelactive ul li{
+animation-name:gnaviAnime;
+animation-duration:1s;
+animation-delay:.2s;/*0.2 秒遅らせて出現*/
+animation-fill-mode:forwards;
+opacity:0;
+}
+@keyframes gnaviAnime{
+0% {
+opacity: 0;
+}
+100% {
+opacity: 1;
+}
+}
+
+
+/*リストのレイアウト設定*/
+#g-nav li{
+	text-align: center; 
+	list-style: none;
+}
+
+#g-nav li a{
+	color: #333;
+	text-decoration: none;
+	padding:10px;
+	display: block;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	font-weight: bold;
+}
+
+
+/*========= ボタンのためのCSS ===============*/
+.openbtn{
+	position:fixed;
+	top:5px;
+	right: 10px;
+	z-index: 9999;/*ボタンを最前面に*/
+	cursor: pointer;
+    width: 50px;
+    height:50px;
+}
+	
+/*×に変化*/	
+.openbtn span{
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+	background-color: #666;
+  	width: 45%;
+  }
+
+.openbtn span:nth-of-type(1) {
+	top:15px;	
+}
+
+.openbtn span:nth-of-type(2) {
+	top:23px;
+}
+
+.openbtn span:nth-of-type(3) {
+	top:31px;
+}
+
+.openbtn.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+}
+
+.openbtn.active span:nth-of-type(2) {
+	opacity: 0;
+}
+
+.openbtn.active span:nth-of-type(3){
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+}
+
+/* メイン */
+main{
+    width: 1200px;
+    margin: auto;
+}
+
+/* イントロダクション */
 #introduce{
-    height: 800px;
+    height: 730px;
 }
 
 h2{
@@ -97,6 +270,7 @@ iframe{
     margin-bottom: auto;
 }
 
+/* ディスコグラフィ */
 .container-disco{
     display: flex;
     margin-top: 3%;
@@ -104,9 +278,11 @@ iframe{
 }
 
 .flex-item-text{
+    margin-top: -32px;
     margin-left: auto;
     margin-right: auto;
     font-size: 1rem;
+    width: 900px;
 }
 
 .flex-item-text-title{
@@ -116,7 +292,7 @@ iframe{
 
 .flex-item-text-title time{
     margin-left: auto;
-    margin-top: 2%;
+    margin-top: 2.5%;
 }
 
 h3{
@@ -128,6 +304,12 @@ hr{
     height: 1px;
     border: none;
 }
+
+/* フッター */
+/* footer{
+    position: absolute;
+    bottom: 0;
+} */
 
 #footer-container{
     display: flex;
@@ -143,11 +325,170 @@ hr{
 }
 
 #footer-vaundy-img{
-    margin-right: auto;
+    /* margin-right: auto; */
     margin-left: auto;
 }
 
 #copy-right{
     font-size: 0.6rem;
     margin-left: auto;
+}
+
+/* LIVE */
+
+#live-main{
+    text-align: center;
+    margin-top: 100px;
+}
+
+/* NEWS */
+
+#news-main{
+    text-align: center;
+    margin-top: 100px;
+}
+
+/* TV */
+
+#tv-main{
+    text-align: center;
+    margin-top: 100px;
+}
+
+/* CONTACT */
+#contact-main{
+    text-align: center;
+    margin-top: 100px;
+}
+
+/*==================================================
+アコーディオンのためのcss
+===================================*/
+
+/*アコーディオン全体*/
+.accordion-area{
+    list-style: none;
+    width: 96%;
+    max-width: 900px;
+    margin: 0 auto 40px;
+}
+
+.accordion-area li{
+    margin: 10px 0;
+}
+
+.accordion-area section {
+    border-bottom: 1px solid black;
+    /* border-top: 1px solid #ccc; */
+}
+
+/*アコーディオンタイトル*/
+.title {
+    position: relative; /* +マークの位置基準とするためrelative指定 */
+    cursor: pointer;
+    font-size:1rem;
+    font-weight: normal;
+    transition: all .5s ease;
+    text-align: justify;
+    margin-left: 30px;
+}
+
+/*アイコンの＋と×*/
+.title::before,
+.title::after{
+    position: absolute;
+    content:'';
+    width: 15px;
+    height: 2px;
+    background-color: #333;
+    
+}
+.title::before{
+    top:48%;
+    right: 15px;
+    transform: rotate(0deg);
+    
+}
+.title::after{    
+    top:48%;
+    right: 15px;
+    transform: rotate(90deg);
+
+}
+
+/*　closeというクラスがついたら形状変化　*/
+
+.title.close::before{
+  transform: rotate(45deg);
+}
+
+.title.close::after{
+  transform: rotate(-45deg);
+}
+
+/*アコーディオンで現れるエリア*/
+.box {
+    display: none;/*はじめは非表示*/
+    margin:0 3% 3% 3%;
+    padding: 3%;
+    text-align: justify;
+    border: 1px solid #000000;
+}
+
+.title time{
+    font-size: 0.8rem;
+    position: absolute;
+    right: 50px;
+    top: 8px;
+    color: rgb(17, 17, 17);
+}
+
+.box img{
+    float: right;
+}
+
+/* コンタクトフォーム */
+form{
+    width: 500px;
+    margin: 0 auto 60px;
+}
+
+form input{
+    width: 500px;
+    height: 40px;
+    font-size: 1rem;
+    border-width: 1px;
+    background-color: white;
+    opacity: 0.8;
+}
+
+form textarea{
+    width: 500px;
+    height: 300px;
+    font-size: 1rem;
+    border-width: 1px;
+    opacity: 0.8;
+}
+
+form p{
+    text-align: justify;
+    margin:30px 0 0 0;
+    font-size: 0.9rem;
+}
+
+form span{
+    font-size: 0.6rem;
+    margin-left: 10px;
+}
+
+
+#post{
+    width: 100px;
+    height: 40px;
+    font-size: 1.2rem;
+    padding: 5px;
+}
+
+#post-button{
+    margin: 20px 0 0 200px;
 }
