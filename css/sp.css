@@ -8,6 +8,9 @@
 
 body{
   width: 97vw;
+}
+
+.second-body{
   background-image: url(../image/background_image.png);
   background-size: 250px;
   background-repeat: no-repeat;
@@ -34,6 +37,10 @@ main{
   width: 95vw;
   text-align: center;
 }
+/* 
+h2{
+  font-size: 1rem;
+} */
 
 /* イントロダクション */
 #container-intro{
@@ -53,15 +60,12 @@ main{
   margin-top: 0px;
   margin-bottom: 0px;
   top: 100px;
+  font-size: 0.9rem;
+  width: 95vw;
 }
 
 #introduce-left{
     height: 600px;
-}
-
-#introduce-left p{
-  font-size: 1rem;
-  width: 95vw;
 }
 
 #introduce-right{
@@ -159,16 +163,19 @@ h3{
 .accordion-area{
   list-style: none;
   width: 80vw;
-  max-width: 900px;
   margin: 0 0 40px;
 }
 
 .title{
-  font-size: 0.8rem;
+  font-size: 0.7rem;
 }
 
 .title time{
   display: none;
+}
+
+.title-box{
+  width: 90%;
 }
 
 .box img{
