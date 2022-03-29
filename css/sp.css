@@ -1,5 +1,11 @@
 @media screen and (max-width:776px){
 
+/* common */
+
+h2{
+  font-size: 2rem;
+}
+
 /* バックグラウンド */
 .second-page{
   background-size: 100vw;
@@ -51,6 +57,7 @@ main{
 
 #introduce{
   margin-top: 20px;
+  /* width: 30px; */
 }
 
 #container-intro{
@@ -60,7 +67,7 @@ main{
 #introduce-left{
   height: 400px;
   width: 90vw;
-  margin-bottom: 20px;
+  margin: 0 auto 20px;
 }
 
 #introduce-left img{
@@ -127,7 +134,7 @@ iframe + iframe{
 
 h3{
   margin: 10px 0px 6px 0px;
-  font-size: 1.4rem;
+  font-size: 1rem;
 }
 
 /* LIVE */
@@ -168,7 +175,7 @@ footer{
 
 #footer-sns-logo{
   padding-bottom: 15px;
-  width: 130px;
+  width: 115px;
 }
 
 #footer-vaundy-img{
@@ -216,7 +223,7 @@ footer{
 /* コンタクトフォーム */
 
 form{
-  width: 300px;
+  width: 250px;
   margin: 0 auto 60px;
 }
 
@@ -233,7 +240,13 @@ form textarea{
 }
 
 form p{
-  font-size: 0.8rem;
+  font-size: 0.7rem;
+  margin: 5px auto;
+}
+
+form span{
+  font-size: 0.5rem;
+  margin-left: 10px;
 }
 
 
@@ -245,7 +258,8 @@ form p{
 }
 
 #post-button{
-  margin: 20px 0 0 110px;
+  margin: 10px 0 0 110px;
 }
+
 
 }
