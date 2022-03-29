@@ -42,9 +42,26 @@ body{
 
 /*ヘッダー */
 
+#header-image{
+  margin: 0 auto;
+  height: 100vw;
+}
+
 #header-image div{
   text-shadow: 15px 15px 10px #7a2b2b;
+  font-size: 27vw;
+  left: 3vw;
+  top: 25%;
 }
+
+#header-vaundy{
+  position: relative;
+  top: 13%;
+  left: 30vw;
+  width: 35vw;
+  z-index: 1;
+}
+
 
 
 /* メイン */
@@ -89,8 +106,8 @@ main{
 }
 
 iframe{
-  width: 420px;
-  height: 250px;
+  width: 400px;
+  height: 230px;
   margin: 0 auto;
 }
 
@@ -113,6 +130,8 @@ iframe + iframe{
 
 .container-disco img{
   margin: 0 auto;
+  width: 180px;
+  height: 180px;
 }
 
 .flex-item-text{
@@ -122,6 +141,7 @@ iframe + iframe{
 
 .flex-item-text-title{
   display: block;
+  margin-left: 0;
 }
 
 .flex-item-text-title time{
