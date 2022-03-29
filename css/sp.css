@@ -3,7 +3,10 @@
 /* バックグラウンド */
 .second-page{
   background-size: 100vw;
+  height: 100%;
 }
+
+
 /* バー */
 
 body{
@@ -13,12 +16,11 @@ body{
 .second-body{
   background-image: url(../image/background_image.png);
   background-size: 250px;
-  background-repeat: no-repeat;
-  background-position: center 0px;
+  background-position: center 50px;
 }
 
 #bar{
-  padding-top: 3px;
+  padding-top: 0px;
   padding-bottom: 3px;
 }
 
@@ -28,56 +30,65 @@ body{
 
 /* グローバルナビゲーション */
 .openbtn{
-  top: -10px;
+  top: -8px;
 	right: 2px;
 }
+
+/*ヘッダー */
+
+#header-image div{
+  text-shadow: 15px 15px 10px #7a2b2b;
+}
+
 
 /* メイン */
 main{
   width: 95vw;
   text-align: center;
 }
-/* 
-h2{
-  font-size: 1rem;
-} */
 
 /* イントロダクション */
-#container-intro{
-  flex-direction: column;
+
+#introduce{
+  margin-top: 20px;
 }
 
 #container-intro{
-  height: 650px;
+  display: block;
+}
+
+#introduce-left{
+  height: 400px;
+  width: 90vw;
+  margin-bottom: 20px;
 }
 
 #introduce-left img{
   width: 230px;
-  margin-top: 20px;
+  display: none;
+}
+
+#introduce-left-text{
+  position: static;
+  text-align: justify;
 }
 
 #introduce-left p{
-  margin-top: 0px;
-  margin-bottom: 0px;
-  top: 100px;
-  font-size: 0.9rem;
-  width: 95vw;
-}
-
-#introduce-left{
-    height: 600px;
+  font-size: 0.7rem;
 }
 
 #introduce-right{
   flex-direction: row;
-  margin-left: auto;
-  margin-left: 0px;
 }
 
 iframe{
-  margin: auto;
-  width: 45vw;
-  height: 30vw;
+  width: 420px;
+  height: 250px;
+  margin: 0 auto;
+}
+
+iframe + iframe{
+  display: none;
 }
 
 #introduce{
@@ -85,12 +96,16 @@ iframe{
 }
 
 /* ディスコグラフィ */
+#discography{
+  margin-top: 60px;
+}
+
 .container-disco{
   flex-direction: column;
 }
 
 .container-disco img{
-  margin: auto;
+  margin: 0 auto;
 }
 
 .flex-item-text{
@@ -143,18 +158,28 @@ h3{
 }
 
 /* フッター */
+footer{
+  margin: 0 15px;
+}
+
 #footer-sns-logo img{
   width: 25px;
 }
 
 #footer-sns-logo{
-  width: 110px;
+  padding-bottom: 15px;
+  width: 130px;
 }
 
 #footer-vaundy-img{
   width: 15px;
   height: 33px;
-  margin-top: 4px;
+  margin-top: 30px;
+}
+
+#copy-right{
+  font-size: 0.6rem;
+  margin-top: 35px;
 }
 
 
@@ -180,7 +205,7 @@ h3{
 
 .box img{
   float: none;
-  width: 300px;
+  width: 250px;
   margin: 10px;
 }
 
@@ -212,7 +237,7 @@ form p{
 }
 
 
-#post{
+#btn_post{
   width: 80px;
   height: 40px;
   font-size: 0.7rem;
@@ -220,7 +245,7 @@ form p{
 }
 
 #post-button{
-  margin: 20 0 0 110;
+  margin: 20px 0 0 110px;
 }
 
 }
