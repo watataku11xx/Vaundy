@@ -15,21 +15,16 @@ html{
     background-size: 500px;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: center 100px;
 }
 
 body{
-    margin: auto;
-    width: 100vw;
+    margin: 0 auto;
+    width: 100%;
     font-family: sans-serif;
 }
 
 img{
     vertical-align: bottom;
-}
-
-body{
-    margin: 0;
 }
 
 p{
@@ -326,7 +321,7 @@ h3{
 }
 
 hr{
-    background-color: black;
+    background-color: rgb(167, 161, 161);
     height: 1px;
     border: none;
 }
@@ -416,7 +411,7 @@ footer{
 }
 
 .title-box{
-    width: 800px;
+    width: 90%;
 }
 
 /*アイコンの＋と×*/
