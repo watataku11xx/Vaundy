@@ -31,36 +31,38 @@
             <div class="circle-bg"></div>
         </header>
 
-        <main id="contact-main">
-          <h2>CONTACT</h2>
-          <form method="post" action="php/mail.php">
-            <p>お名前<span>※必須</span></p>
-            <input type="text" name="お名前" required="required">
-            <p>法人名</p>
-            <input type="text" name="法人名">
-            <p>電話番号</p>
-            <input type="text" name="電話番号">
-            <p>メールアドレス<span>※必須</span></p>
-            <input type="email" name="Email" required="required">
-            <p>お問い合わせ内容<span>※必須</span></p>
-            <textarea name="お問い合わせ内容" cols="33" rows="5" required="required"></textarea>
-            <p id="post-button">
-            <input type="submit" value="  送信する  " id="btn_post">
-            </p>
-          </form>
-        </main>
-
-        <footer>
-            <div id="footer-container">
-                <div id="footer-sns-logo">
-                    <p id="Twitter_icon"><a href="https://twitter.com/vaundy_engawa?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><img src="image/Twitter.svg" alt="ツイッターロゴ" width="30"></a></p>
-                    <p id="Instagram_icon"><a href="https://www.instagram.com/vaundy_engawa/" target="_blank"><img src="image/Instagram.svg" alt="インスタグラムロゴ" width="30"></a></p>
-                    <p id="YouTube_icon"><a href="https://www.youtube.com/channel/UC1FQWQ3y3-e8l1pCtWhJt5A" target="_blank"><img src="image/YouTube.svg" alt="ユーチューブロゴ" width="30"></a></p>
+        <div class="wrapper">
+            <main id="contact-main">
+              <h2>CONTACT</h2>
+              <form method="post" action="php/mail.php">
+                <p>お名前<span>※必須</span></p>
+                <input type="text" name="お名前" required="required">
+                <p>法人名</p>
+                <input type="text" name="法人名">
+                <p>電話番号</p>
+                <input type="text" name="電話番号">
+                <p>メールアドレス<span>※必須</span></p>
+                <input type="email" name="Email" required="required">
+                <p>お問い合わせ内容<span>※必須</span></p>
+                <textarea name="お問い合わせ内容" cols="33" rows="5" required="required"></textarea>
+                <p id="post-button">
+                <input type="submit" value="  送信する  " id="btn_post">
+                </p>
+              </form>
+            </main>
+    
+            <footer>
+                <div id="footer-container">
+                    <div id="footer-sns-logo">
+                        <p id="Twitter_icon"><a href="https://twitter.com/vaundy_engawa?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><img src="image/Twitter.svg" alt="ツイッターロゴ" width="30"></a></p>
+                        <p id="Instagram_icon"><a href="https://www.instagram.com/vaundy_engawa/" target="_blank"><img src="image/Instagram.svg" alt="インスタグラムロゴ" width="30"></a></p>
+                        <p id="YouTube_icon"><a href="https://www.youtube.com/channel/UC1FQWQ3y3-e8l1pCtWhJt5A" target="_blank"><img src="image/YouTube.svg" alt="ユーチューブロゴ" width="30"></a></p>
+                    </div>
+                    <img src="image/vaundy_silhouette.png" alt="バウンディのシルエット" id="footer-vaundy-img" width="20" height="44">
+                    <p id="copy-right">©Takuto Watanabe</p>
                 </div>
-                <img src="image/vaundy_silhouette.png" alt="バウンディのシルエット" id="footer-vaundy-img" width="20" height="44">
-                <p id="copy-right">©Takuto Watanabe</p>
-            </div>
-        </footer>
+            </footer>
+        </div>
         <script src="js/jquery-3.6.0.min.js"></script>
         <script src="js/script.js"></script>
     </body>

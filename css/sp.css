@@ -13,16 +13,12 @@ h2{
 
 /* バックグラウンド */
 .second-page{
-  background-size: 100%;
+  background-size: 300px, 100%;
+  background-position: center 50px, 0 0;
 }
-
 
 /* バー */
 
-.second-body{
-  background-size: 250px;
-  background-position: center 100px;
-}
 
 #bar{
   padding-top: 3px;
@@ -35,8 +31,7 @@ h2{
 
 /* グローバルナビゲーション */
 .openbtn{
-  top: -3px;
-	/* right: 2px; */
+  top: -3px;  
 }
 
 /*ヘッダー */
@@ -286,6 +281,10 @@ form span{
 
 #post-button{
   margin: 5% 0 0 35%;
+}
+
+.wrapper{
+  height: 100vh;
 }
 
 
